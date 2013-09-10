@@ -40,6 +40,7 @@ function onDeviceReady(){
 var options = new ContactFindOptions();
 options.filter="";
 var fields = ["phoneNumbers", "name"];
+alert("ok");
 navigator.service.contacts.find(fields, onSuccess, onError
 , options);
 }
