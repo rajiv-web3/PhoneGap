@@ -20,7 +20,7 @@
 <html>
     <head>
 	<script type="text/javascript" src="phonegap.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
+        
 		<script type="text/javascript" src="js/jquery.js"></script>
         <script type="text/javascript">
             document.addEventListner("deviceready","onDeviceReady",false);
@@ -28,6 +28,7 @@
 			document.addEventListner("backbutton","onBackButton",false);
 			function onDeviceReady()
 			{
+			alert("ok");
 			$("#infodiv").text("Welcome");
 			}
 			function onMenuButton()
