@@ -20,6 +20,7 @@
 <html>
     <head>
 	<script type="text/javascript" src="phonegap.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
         
 		
         <script type="text/javascript">
@@ -29,6 +30,7 @@
 
 			function onDeviceReady(){
 			alert('123');
+			$('#infodiv').html('Device Name : '+device.name+'<br>Device Version : '+device.version+'<br>Device UUID : '+device.version);
 				}
 			</script>
         <meta charset="utf-8" />
