@@ -30,7 +30,15 @@
 
 			function onDeviceReady(){
 			alert('123');
-			$('#infodiv').html('Device Name : '+device.name+'<br>Device Version : '+device.version+'<br>Device UUID : '+device.version);
+			$('#infodiv').html('Device Name : '+device.name+'<br>Device Version : '+device.version+'<br>Device UUID : '+device.uuid);
+				}
+				function CheckNetwork()
+				{
+				var networkType=navigator.network.connection.type;
+				var states{};
+				states[Connection.UNKNOWN]='Unknown Connetion';
+				states[Connection.CELL_2G]='Mobile Network';
+				alert('Connection type : '+states[networktype]);
 				}
 			</script>
         <meta charset="utf-8" />
