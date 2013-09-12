@@ -31,17 +31,9 @@
 			function onDeviceReady(){
 			$('span').hide();
 			alert('Now Device is Ready');
-			$('#infodiv').html('Device Name : '+device.name+'<br>Device Version : '+device.version+'<br>Device UUID : '+device.phonegap);
+			$('#infodiv').html('Device Name : '+device.name+'<br>Device Version : '+device.version+'<br>Device UUID : '+device.uuid);
 				}
-				function CheckNetwork()
-				{
-				navigator.notification.alert('hi i am using notificaion',okey,'My Notification','Done');
-				}
-				function okey();
-				{
-				alert('Good!!!');
-				}
-
+				
 			</script>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
