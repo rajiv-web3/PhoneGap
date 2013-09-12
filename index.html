@@ -30,13 +30,21 @@
 
 			function onDeviceReady(){
 			$('span').hide();
-			alert('Now Device is Ready');
+			
 			$('#infodiv').html('Device Name : '+device.name+'<br>Device Version : '+device.version+'<br>Device UUID : '+device.uuid);
 				}
 				function Hi()
 				{
 				alert('hi');
+				notification.alert('Hiiii',calling);
 				}
+				function calling()
+				{
+				$('span').show();
+				$('span').text('done');
+				}
+				
+				
 				
 			</script>
         <meta charset="utf-8" />
