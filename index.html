@@ -29,11 +29,12 @@
 			}
 
 			function onDeviceReady(){
-			alert('123');
+			alert('Now Device is Ready');
 			$('#infodiv').html('Device Name : '+device.name+'<br>Device Version : '+device.version+'<br>Device UUID : '+device.uuid);
 				}
 				function CheckNetwork()
 				{
+				alert('ok');
 				var networkType=navigator.network.connection.type;
 				var states{};
 				states[Connection.UNKNOWN]='Unknown Connetion';
@@ -49,9 +50,9 @@
     </head>
     <body  onload="Ready();">
         
-            <div id="infodiv">Rajeev Ranjan</div>
+            <div id="infodiv" style="background-color:gray;">Rajeev Ranjan</div>
        
         
-		<a href="#" onclick="test();">Device Info</a>
+		<a href="#" onclick="CheckNetwork();">Device Info</a>
     </body>
 </html>
