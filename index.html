@@ -30,17 +30,9 @@
 
 			function onDeviceReady(){
 			alert('Now Device is Ready');
-			$('#infodiv').html('Device Name : '+device.name+'<br>Device Version : '+device.version+'<br>Device UUID : '+device.uuid);
+			$('#infodiv').html('Device Name : '+device.name+'<br>Device Version : '+device.version+'<br>Device UUID : '+device.phonegap);
 				}
-				function CheckNetwork()
-				{
-				alert('ok');
-				var networkType=navigator.network.connection.type;
-				var states{};
-				states[Connection.UNKNOWN]='Unknown Connetion';
-				states[Connection.CELL_2G]='Mobile Network';
-				alert('Connection type : '+states[networktype]);
-				}
+				
 			</script>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
