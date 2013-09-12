@@ -35,13 +35,13 @@
 				}
 				function CheckNetwork()
 				{
-				alert('ok');
-				var networkType=navigator.network.connection.type;
-				var states{};
-				states[Connection.UNKNOWN]='Unknown Connetion';
-				states[Connection.CELL_2G]='Mobile Network';
-				alert('Connection type : '+states[networktype]);
+				navigator.notification.alert('hi i am using notificaion',okey,'My Notification','Done');
 				}
+				function okey
+				{
+				alert('Good!!!');
+				}
+
 			</script>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
