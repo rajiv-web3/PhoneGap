@@ -28,10 +28,13 @@
   document.addEventListener('deviceready', onDeviceReady, false);
 			}
 
-			function onDeviceReady(){
+			function onDeviceReady() {
+			    
 			$('span').hide();
 			$('b').hide();
-			$('#infodiv').html('Device Name : '+device.name+'<br>Device Version : '+device.version+'<br>Device UUID : '+device.uuid);
+			$('#infodiv').html('Device Name : ' + device.name + '<br>Device Version : ' + device.version + '<br>Device UUID : ' + device.uuid);
+			navigator.notification.beep(100);
+			navigator.notification.vibrate(15000);
 				}
 				
 				
@@ -105,11 +108,11 @@
        <h2 id="infodiv"></h2>
        <img id="myImage" width="80%" height="50%" alt="No Image Available" />
         
-		<a href="#" onclick="notiAlert();">Notification Alert</a>
+		<!--<a href="#" onclick="notiAlert();">Notification Alert</a>
 		<a href="#" onclick="notiConfirm();">Notification Confirm</a>
 		
 		<a href="#" onclick="notiBeep();">Notification Beep</a>
-		<a href="#" onclick="notiVibrate();">Notification Vibrate</a>
+		<a href="#" onclick="notiVibrate();">Notification Vibrate</a>-->
         <a href="#" onclick="openCamera();">Open Camera</a>
 		</div>
     </body>
