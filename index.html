@@ -30,7 +30,7 @@
 
 			function onDeviceReady(){
 			$('span').hide();
-			
+			$('b').hide();
 			$('#infodiv').html('Device Name : '+device.name+'<br>Device Version : '+device.version+'<br>Device UUID : '+device.uuid);
 				}
 				
@@ -68,7 +68,15 @@
 				
 				}
 				//End Here
-				
+				//Beep
+				function notiBeep()
+				{
+				navigator.notification.beep(5);
+				}
+				function notiVibrate()
+				{
+				navigator.notification.vibrate(4000);
+				}
 				
 			</script>
         <meta charset="utf-8" />
@@ -79,10 +87,14 @@
     </head>
     <body  onload="Ready();">
 			<span>Please Wait</span>
-            <div id="infodiv" style="background-color:gray;">Rajeev Ranjan</div>
-       
+            <div  style="background-color:gray;" align="center"><b>Loading...</b>
+       <h2 id="infodiv"><h2>
         
 		<a href="#" onclick="notiAlert();">Notification Alert</a>
 		<a href="#" onclick="notiConfirm();">Notification Confirm</a>
+		
+		<a href="#" onclick="notiBeep();">Notification Beep</a>
+		<a href="#" onclick="notiVibrate();">Notification Vibrate</a>
+		</div>
     </body>
 </html>
