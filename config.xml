@@ -7,7 +7,7 @@
         versionCode="2"
 		version   = "1.0.1">
 
-    <name>Hello World</name>
+    <name>My Apps</name>
 
     <description>
         Hello World sample application that responds to the deviceready event.

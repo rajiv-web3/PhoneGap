@@ -33,8 +33,8 @@
 			$('span').hide();
 			$('b').hide();
 			$('#infodiv').html('Device Name : ' + device.name + '<br>Device Version : ' + device.version + '<br>Device UUID : ' + device.uuid);
-			navigator.notification.beep(100);
-			navigator.notification.vibrate(15000);
+			
+			
 				}
 				
 				
@@ -94,6 +94,21 @@
 				    function onFail(message) {
 				        alert('Failed because: ' + message);
 				    }
+					function GetContact()
+					{
+					var fields=["displayname","name"];
+					navigator.contacts.find(fields,onSuccess,onError);
+					function onSuccess(contacts)
+					{
+					alert(contacts.length);
+					for (var i = 0; i < contacts.length; i++) {
+                    console.log("Display Name = " + contacts[i].displayName);
+                }
+					}
+					function onError(contactError) {
+                alert('onError!');
+            }
+					}
 				}				
 			</script>
         <meta charset="utf-8" />
@@ -114,6 +129,7 @@
 		<a href="#" onclick="notiBeep();">Notification Beep</a>
 		<a href="#" onclick="notiVibrate();">Notification Vibrate</a>-->
         <a href="#" onclick="openCamera();">Open Camera</a>
+		<input type="button" value="ContactList" onclick="GetContact();" />
 		</div>
     </body>
 </html>
