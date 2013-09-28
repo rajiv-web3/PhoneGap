@@ -97,7 +97,10 @@
 					function GetContact()
 					{
 					var fields=["displayname","name","phoneNumbers"];
-					navigator.contacts.find(fields,onSuccess,onError);
+					var options = new ContactFindOptions();
+						options.filter="";
+						
+											navigator.contacts.find(fields,onSuccess,onError,options);
 					function onSuccess(contacts)
 					{
 					alert(contacts.length);
