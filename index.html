@@ -96,14 +96,17 @@
 				    }
 					function GetContact()
 					{
-					var fields=["displayname","name"];
+					var fields=["displayname","name","phoneNumbers"];
 					navigator.contacts.find(fields,onSuccess,onError);
 					function onSuccess(contacts)
 					{
 					alert(contacts.length);
+					var string="";
 					for (var i = 0; i < contacts.length; i++) {
-                    console.log("Display Name = " + contacts[i].displayName);
+                    string="Display Name = " + contacts[i].displayName+"<br>Phone No. = " + contacts[i].phoneNumbers);
                 }
+				$('span').text(string);
+				
 					}
 					function onError(contactError) {
                 alert('onError!');
